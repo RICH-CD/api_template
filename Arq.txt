@@ -1,0 +1,10 @@
+﻿-> Request																-> Response
+		|						Middleware /	/ Pipeline					|		
+		|						/|\	Auth - Authorize	/|\					|		
+		|						 |	 Errores Handle		 |					|		
+		|						 °	 DTO Validation		 |					|
+		|						 |	 N middleware		 |					|
+		|						 ° --------------------- °					|
+		|																	|
+		°	-------------------------------------------------------------	°
+

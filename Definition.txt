@@ -1,0 +1,76 @@
+﻿// ------ propuesta ------ //
+
+Me gustaria agregar documentacion segregada, que readme.md sea un indice, que nos lleve a donde se encuentra la documentacion
+
+con el fin de tener lecturas ligeras y divididas en base al componente.
+en otras palabras. Si un dia estas haciendo un fix directamente a un componente, y que dentro de la arquitectura se incluya una
+carpeta para crear documentacion. que nos exija escribir algo, quizas en palabras humanas con poco tecnisismos para que nuestros yo
+del futuro y/o quizas becarios que nos ayuden al desarrollo ;).
+
+
+** Crear: Grieg. Antiguo. Hacer que algo exista.
+
+// ------ Extructura general de la api ------ //
+
+Solution
+	-->Component
+				-->api
+
+				-->core
+
+					--> Aplication
+								--> ClassLibrary.Project.Aplication
+																	--> DTOs
+																	--> 
+				-->infrastructure
+								--> ClassLibrary.Project.Dominio
+																	--> ClassLibrary
+				-->Documentation
+
+								/\ 	
+// ------ Definitions  --------//\\
+\\ ---------------------------//--\\ 
+
+*
+**
+***
+**
+*
+
+							|-\\	
+// ------ Definitions  ----	|| ||
+\\ ------------------------	|_//
+
+	->DTO-	Data	Transfer	Object
+
+							 /---\
+//	---		Definitions ---	||   ||
+\\	------	--------------	||   ||
+							 \___/	
+
+	->Onion Arch
+
+Core Layer (Domain Layer):
+
+The core layer contains the domain entities, value objects, domain services, and domain events.
+It defines the core business logic and encapsulates the fundamental concepts of the application domain.
+The core layer is independent of any external frameworks or technologies, including database access.
+
+
+Infrastructure Layer:
+
+The infrastructure layer surrounds the core layer and provides implementations for supporting infrastructure concerns, 
+including data access.
+This layer includes the DbContext class, which represents the database session and provides APIs for 
+interacting with the underlying database.
+The DbContext is responsible for mapping domain entities to database tables, managing database connections and transactions, 
+and executing database queries and updates.
+Other infrastructure components such as repositories, database migrations, 
+and data access utilities may also reside in this layer.
+
+
+Application Layer:
+
+The application layer sits outside the core layer and orchestrates interactions between the core domain and infrastructure components.
+Application services within this layer use the DbContext to perform data access operations, retrieve domain objects, and execute domain logic.
+Application services encapsulate use cases of the application and coordinate the flow of data and operations between the presentation layer, domain layer, and infrastructure layer.

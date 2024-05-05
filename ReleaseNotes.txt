@@ -1,0 +1,8 @@
+﻿// - Este es un historioco de los release y sus feactures, bugs hot fix, 
+
+// -- Desarrollo comenzo en abril 2024 --//
+
+V1.0 Primer micro version. se agrega el procedure Pro_Adm_ConsultarSucursales
+	-- Esta api tiene la funcion de regresarnos la informacion de las sucursales
+
+
